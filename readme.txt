@@ -8,9 +8,10 @@ it has 2 working module,
 2. listing of orders with filters
 3. Dahsboard(not completed, it contains the list of data only)
 
-==Order.Web==
+==Order_Angular.zip==
 Contains the working demo in angular 17 framework
 It has only one working page of listing order data
+created a zip because there was some upload issue in github
 
 ==SQLScripts==
 Contains the entire database including, table, Storedprocedures, data
