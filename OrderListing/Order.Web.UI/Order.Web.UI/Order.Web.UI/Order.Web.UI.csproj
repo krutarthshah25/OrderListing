@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0AA4B259-42DE-41B1-93FD-0B52A22413D3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Order.Web.UI</RootNamespace>
+    <AssemblyName>Order.Web.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.3.7\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.3.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app-assets\css\app.css" />
+    <Content Include="app-assets\css\bootstrap-extended.css" />
+    <Content Include="app-assets\css\bootstrap.css" />
+    <Content Include="app-assets\css\colors.css" />
+    <Content Include="app-assets\css\core\colors\palette-gradient.css" />
+    <Content Include="app-assets\css\core\colors\palette-tooltip.css" />
+    <Content Include="app-assets\css\core\menu\menu-types\vertical-menu.css" />
+    <Content Include="app-assets\css\core\menu\menu-types\vertical-overlay-menu.css" />
+    <Content Include="app-assets\css\pages\coming-soon.css" />
+    <Content Include="app-assets\css\pages\error.css" />
+    <Content Include="app-assets\css\pages\gallery.css" />
+    <Content Include="app-assets\css\pages\invoice.css" />
+    <Content Include="app-assets\css\pages\login-register.css" />
+    <Content Include="app-assets\css\pages\search.css" />
+    <Content Include="app-assets\css\pages\timeline.css" />
+    <Content Include="app-assets\css\pages\under-maintenance.css" />
+    <Content Include="app-assets\css\plugins\animate\animate.css" />
+    <Content Include="app-assets\data\jqvmaps\jquery.vmap.sampledata.js" />
+    <Content Include="app-assets\fonts\flag-icon-css\css\flag-icon.min.css" />
+    <Content Include="app-assets\fonts\icomoon.css" />
+    <Content Include="app-assets\fonts\icomoon\icomoonc994.svg" />
+    <Content Include="app-assets\images\backgrounds\bg-12.jpg" />
+    <Content Include="app-assets\images\backgrounds\bg-14.jpg" />
+    <Content Include="app-assets\images\backgrounds\bg-2.jpg" />
+    <Content Include="app-assets\images\carousel\01.jpg" />
+    <Content Include="app-assets\images\carousel\02.jpg" />
+    <Content Include="app-assets\images\carousel\03.jpg" />
+    <Content Include="app-assets\images\carousel\04.jpg" />
+    <Content Include="app-assets\images\carousel\05.jpg" />
+    <Content Include="app-assets\images\carousel\06.jpg" />
+    <Content Include="app-assets\images\carousel\07.jpg" />
+    <Content Include="app-assets\images\carousel\08.jpg" />
+    <Content Include="app-assets\images\carousel\09.jpg" />
+    <Content Include="app-assets\images\carousel\10.jpg" />
+    <Content Include="app-assets\images\carousel\11.jpg" />
+    <Content Include="app-assets\images\carousel\14.jpg" />
+    <Content Include="app-assets\images\carousel\15.jpg" />
+    <Content Include="app-assets\images\gallery\1.jpg" />
+    <Content Include="app-assets\images\gallery\10.jpg" />
+    <Content Include="app-assets\images\gallery\11.jpg" />
+    <Content Include="app-assets\images\gallery\12.jpg" />
+    <Content Include="app-assets\images\gallery\13.jpg" />
+    <Content Include="app-assets\images\gallery\14.jpg" />
+    <Content Include="app-assets\images\gallery\15.jpg" />
+    <Content Include="app-assets\images\gallery\16.jpg" />
+    <Content Include="app-assets\images\gallery\2.jpg" />
+    <Content Include="app-assets\images\gallery\23.jpg" />
+    <Content Include="app-assets\images\gallery\25.jpg" />
+    <Content Include="app-assets\images\gallery\3.jpg" />
+    <Content Include="app-assets\images\gallery\4.jpg" />
+    <Content Include="app-assets\images\gallery\5.jpg" />
+    <Content Include="app-assets\images\gallery\6.jpg" />
+    <Content Include="app-assets\images\gallery\7.jpg" />
+    <Content Include="app-assets\images\gallery\8.jpg" />
+    <Content Include="app-assets\images\gallery\9.jpg" />
+    <Content Include="app-assets\images\ico\apple-icon-120.png" />
+    <Content Include="app-assets\images\ico\apple-icon-152.png" />
+    <Content Include="app-assets\images\ico\apple-icon-60.png" />
+    <Content Include="app-assets\images\ico\apple-icon-76.png" />
+    <Content Include="app-assets\images\ico\favicon-32.png" />
+    <Content Include="app-assets\images\jvqmap\marker\blue.png" />
+    <Content Include="app-assets\images\jvqmap\marker\purple.png" />
+    <Content Include="app-assets\images\jvqmap\marker\red.png" />
+    <Content Include="app-assets\images\logo\logo2.png" />
+    <Content Include="app-assets\images\logo\robust-80x80.png" />
+    <Content Include="app-assets\images\logo\robust-logo-dark-big.png" />
+    <Content Include="app-assets\images\logo\robust-logo-dark.png" />
+    <Content Include="app-assets\images\logo\robust-logo-light-big.png" />
+    <Content Include="app-assets\images\logo\robust-logo-light.png" />
+    <Content Include="app-assets\images\pages\signature-scan.png" />
+    <Content Include="app-assets\images\portfolio\width-1200\portfolio-1.jpg" />
+    <Content Include="app-assets\images\portfolio\width-600\portfolio-14.jpg" />
+    <Content Include="app-assets\images\portfolio\width-600\portfolio-3.jpg" />
+    <Content Include="app-assets\images\portrait\small\avatar-s-1.png" />
+    <Content Include="app-assets\images\portrait\small\avatar-s-10.png" />
+    <Content Include="app-assets\images\portrait\small\avatar-s-11.png" />
+    <Content Include="app-assets\images\portrait\small\avatar-s-12.png" />
+    <Content Include="app-assets\images\portrait\small\avatar-s-13.png" />
+    <Content Include="app-assets\images\portrait\small\avatar-s-15.png" />
+    <Content Include="app-assets\images\portrait\small\avatar-s-16.png" />
+    <Content Include="app-assets\images\portrait\small\avatar-s-19.png" />
+    <Content Include="app-assets\images\portrait\small\avatar-s-2.png" />
+    <Content Include="app-assets\images\portrait\small\avatar-s-20.png" />
+    <Content Include="app-assets\images\portrait\small\avatar-s-21.png" />
+    <Content Include="app-assets\images\portrait\small\avatar-s-24.png" />
+    <Content Include="app-assets\images\portrait\small\avatar-s-25.png" />
+    <Content Include="app-assets\images\portrait\small\avatar-s-3.png" />
+    <Content Include="app-assets\images\portrait\small\avatar-s-4.png" />
+    <Content Include="app-assets\images\portrait\small\avatar-s-5.png" />
+    <Content Include="app-assets\images\portrait\small\avatar-s-6.png" />
+    <Content Include="app-assets\images\portrait\small\avatar-s-7.png" />
+    <Content Include="app-assets\images\portrait\small\avatar-s-8.png" />
+    <Content Include="app-assets\images\portrait\small\avatar-s-9.png" />
+    <Content Include="app-assets\js\core\app-menu.js" />
+    <Content Include="app-assets\js\core\app.js" />
+    <Content Include="app-assets\js\core\libraries\bootstrap.min.js" />
+    <Content Include="app-assets\js\core\libraries\jquery.min.js" />
+    <Content Include="app-assets\js\scripts\cards\card-charts.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\bar\bar-stacked.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\bar\bar.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\bar\column-stacked.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\bar\column.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\line\line-area.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\line\line-stacked-area.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\line\line.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\pie-doughnut\doughnut-simple.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\pie-doughnut\doughnut.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\pie-doughnut\pie-simple.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\pie-doughnut\pie.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\bar\annotations.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\bar\bar.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\bar\stacked-bar.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\line\line.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\line\realtime.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\line\tracking.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\pie\donut-hole.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\pie\interactive-pie.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\pie\label-formatter.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\pie\pie.js" />
+    <Content Include="app-assets\js\scripts\charts\gmaps\maps.js" />
+    <Content Include="app-assets\js\scripts\charts\google\bar\bar-intervals.js" />
+    <Content Include="app-assets\js\scripts\charts\google\bar\bar-stacked.js" />
+    <Content Include="app-assets\js\scripts\charts\google\bar\bar.js" />
+    <Content Include="app-assets\js\scripts\charts\google\bar\column.js" />
+    <Content Include="app-assets\js\scripts\charts\google\bar\combo.js" />
+    <Content Include="app-assets\js\scripts\charts\google\bar\histogram.js" />
+    <Content Include="app-assets\js\scripts\charts\google\bar\stacked-column.js" />
+    <Content Include="app-assets\js\scripts\charts\google\line\area-interval.js" />
+    <Content Include="app-assets\js\scripts\charts\google\line\area-stacked-stepped.js" />
+    <Content Include="app-assets\js\scripts\charts\google\line\area-stacked.js" />
+    <Content Include="app-assets\js\scripts\charts\google\line\area-stepped.js" />
+    <Content Include="app-assets\js\scripts\charts\google\line\area.js" />
+    <Content Include="app-assets\js\scripts\charts\google\line\line-interval.js" />
+    <Content Include="app-assets\js\scripts\charts\google\line\line.js" />
+    <Content Include="app-assets\js\scripts\charts\google\pie\3d-pie-exploded.js" />
+    <Content Include="app-assets\js\scripts\charts\google\pie\3d-pie.js" />
+    <Content Include="app-assets\js\scripts\charts\google\pie\donut-exploded.js" />
+    <Content Include="app-assets\js\scripts\charts\google\pie\donut-rotated.js" />
+    <Content Include="app-assets\js\scripts\charts\google\pie\donut.js" />
+    <Content Include="app-assets\js\scripts\charts\google\pie\pie-diff-border.js" />
+    <Content Include="app-assets\js\scripts\charts\google\pie\pie-diff-invert.js" />
+    <Content Include="app-assets\js\scripts\charts\google\pie\pie-diff-opacity.js" />
+    <Content Include="app-assets\js\scripts\charts\google\pie\pie-diff-radius.js" />
+    <Content Include="app-assets\js\scripts\charts\google\pie\pie-exploded.js" />
+    <Content Include="app-assets\js\scripts\charts\google\pie\pie-rotated.js" />
+    <Content Include="app-assets\js\scripts\charts\google\pie\pie.js" />
+    <Content Include="app-assets\js\scripts\charts\jqvmap\jqvmap.js" />
+    <Content Include="app-assets\js\scripts\coming-soon\coming-soon.js" />
+    <Content Include="app-assets\js\scripts\gallery\photo-swipe\photoswipe-script.js" />
+    <Content Include="app-assets\js\scripts\modal\components-modal.js" />
+    <Content Include="app-assets\js\scripts\navs\navs.js" />
+    <Content Include="app-assets\js\scripts\pages\dashboard-2.js" />
+    <Content Include="app-assets\js\scripts\pages\dashboard-lite.js" />
+    <Content Include="app-assets\js\scripts\popover\popover.js" />
+    <Content Include="app-assets\js\scripts\tooltip\tooltip.js" />
+    <Content Include="app-assets\vendors\css\charts\jqvmap.css" />
+    <Content Include="app-assets\vendors\css\extensions\pace.css" />
+    <Content Include="app-assets\vendors\css\ui\prism.min.css" />
+    <Content Include="app-assets\vendors\js\charts\chart.min.js" />
+    <Content Include="app-assets\vendors\js\charts\flot\jquery.flot.categories.js" />
+    <Content Include="app-assets\vendors\js\charts\flot\jquery.flot.min.js" />
+    <Content Include="app-assets\vendors\js\charts\flot\jquery.flot.navigate.js" />
+    <Content Include="app-assets\vendors\js\charts\flot\jquery.flot.pie.js" />
+    <Content Include="app-assets\vendors\js\charts\flot\jquery.flot.resize.js" />
+    <Content Include="app-assets\vendors\js\charts\flot\jquery.flot.selection.js" />
+    <Content Include="app-assets\vendors\js\charts\flot\jquery.flot.stack.js" />
+    <Content Include="app-assets\vendors\js\charts\flot\jquery.flot.time.js" />
+    <Content Include="app-assets\vendors\js\charts\gmaps.min.js" />
+    <Content Include="app-assets\vendors\js\charts\jqvmap\jquery.vmap.min.js" />
+    <Content Include="app-assets\vendors\js\charts\jqvmap\maps\continents\jquery.vmap.africa.js" />
+    <Content Include="app-assets\vendors\js\charts\jqvmap\maps\continents\jquery.vmap.asia.js" />
+    <Content Include="app-assets\vendors\js\charts\jqvmap\maps\continents\jquery.vmap.australia.js" />
+    <Content Include="app-assets\vendors\js\charts\jqvmap\maps\continents\jquery.vmap.europe.js" />
+    <Content Include="app-assets\vendors\js\charts\jqvmap\maps\continents\jquery.vmap.north-america.js" />
+    <Content Include="app-assets\vendors\js\charts\jqvmap\maps\continents\jquery.vmap.south-america.js" />
+    <Content Include="app-assets\vendors\js\charts\jqvmap\maps\jquery.vmap.usa.js" />
+    <Content Include="app-assets\vendors\js\charts\jqvmap\maps\jquery.vmap.world.js" />
+    <Content Include="app-assets\vendors\js\coming-soon\jquery.countdown.min.js" />
+    <Content Include="app-assets\vendors\js\extensions\pace.min.js" />
+    <Content Include="app-assets\vendors\js\gallery\masonry\masonry.pkgd.min.js" />
+    <Content Include="app-assets\vendors\js\gallery\photo-swipe\default-skin\default-skin.css" />
+    <Content Include="app-assets\vendors\js\gallery\photo-swipe\default-skin\default-skin.png" />
+    <Content Include="app-assets\vendors\js\gallery\photo-swipe\default-skin\default-skin.svg" />
+    <Content Include="app-assets\vendors\js\gallery\photo-swipe\default-skin\preloader.gif" />
+    <Content Include="app-assets\vendors\js\gallery\photo-swipe\photoswipe-ui-default.min.js" />
+    <Content Include="app-assets\vendors\js\gallery\photo-swipe\photoswipe.css" />
+    <Content Include="app-assets\vendors\js\gallery\photo-swipe\photoswipe.min.js" />
+    <Content Include="app-assets\vendors\js\ui\blockUI.min.js" />
+    <Content Include="app-assets\vendors\js\ui\jquery.matchHeight-min.js" />
+    <Content Include="app-assets\vendors\js\ui\perfect-scrollbar.jquery.min.js" />
+    <Content Include="app-assets\vendors\js\ui\prism.min.js" />
+    <Content Include="app-assets\vendors\js\ui\screenfull.min.js" />
+    <Content Include="app-assets\vendors\js\ui\tether.min.js" />
+    <Content Include="app-assets\vendors\js\ui\unison.min.js" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="js\demo\datatables-demo.js" />
+    <Content Include="OrderList.aspx" />
+    <Content Include="OrderListFilter.aspx" />
+    <Content Include="Select2\css\select2.css" />
+    <Content Include="Select2\css\select2.min.css" />
+    <Content Include="Select2\js\i18n\af.js" />
+    <Content Include="Select2\js\i18n\ar.js" />
+    <Content Include="Select2\js\i18n\az.js" />
+    <Content Include="Select2\js\i18n\bg.js" />
+    <Content Include="Select2\js\i18n\bn.js" />
+    <Content Include="Select2\js\i18n\bs.js" />
+    <Content Include="Select2\js\i18n\ca.js" />
+    <Content Include="Select2\js\i18n\cs.js" />
+    <Content Include="Select2\js\i18n\da.js" />
+    <Content Include="Select2\js\i18n\de.js" />
+    <Content Include="Select2\js\i18n\dsb.js" />
+    <Content Include="Select2\js\i18n\el.js" />
+    <Content Include="Select2\js\i18n\en.js" />
+    <Content Include="Select2\js\i18n\es.js" />
+    <Content Include="Select2\js\i18n\et.js" />
+    <Content Include="Select2\js\i18n\eu.js" />
+    <Content Include="Select2\js\i18n\fa.js" />
+    <Content Include="Select2\js\i18n\fi.js" />
+    <Content Include="Select2\js\i18n\fr.js" />
+    <Content Include="Select2\js\i18n\gl.js" />
+    <Content Include="Select2\js\i18n\he.js" />
+    <Content Include="Select2\js\i18n\hi.js" />
+    <Content Include="Select2\js\i18n\hr.js" />
+    <Content Include="Select2\js\i18n\hsb.js" />
+    <Content Include="Select2\js\i18n\hu.js" />
+    <Content Include="Select2\js\i18n\hy.js" />
+    <Content Include="Select2\js\i18n\id.js" />
+    <Content Include="Select2\js\i18n\is.js" />
+    <Content Include="Select2\js\i18n\it.js" />
+    <Content Include="Select2\js\i18n\ja.js" />
+    <Content Include="Select2\js\i18n\ka.js" />
+    <Content Include="Select2\js\i18n\km.js" />
+    <Content Include="Select2\js\i18n\ko.js" />
+    <Content Include="Select2\js\i18n\lt.js" />
+    <Content Include="Select2\js\i18n\lv.js" />
+    <Content Include="Select2\js\i18n\mk.js" />
+    <Content Include="Select2\js\i18n\ms.js" />
+    <Content Include="Select2\js\i18n\nb.js" />
+    <Content Include="Select2\js\i18n\ne.js" />
+    <Content Include="Select2\js\i18n\nl.js" />
+    <Content Include="Select2\js\i18n\pl.js" />
+    <Content Include="Select2\js\i18n\ps.js" />
+    <Content Include="Select2\js\i18n\pt-BR.js" />
+    <Content Include="Select2\js\i18n\pt.js" />
+    <Content Include="Select2\js\i18n\ro.js" />
+    <Content Include="Select2\js\i18n\ru.js" />
+    <Content Include="Select2\js\i18n\sk.js" />
+    <Content Include="Select2\js\i18n\sl.js" />
+    <Content Include="Select2\js\i18n\sq.js" />
+    <Content Include="Select2\js\i18n\sr-Cyrl.js" />
+    <Content Include="Select2\js\i18n\sr.js" />
+    <Content Include="Select2\js\i18n\sv.js" />
+    <Content Include="Select2\js\i18n\th.js" />
+    <Content Include="Select2\js\i18n\tk.js" />
+    <Content Include="Select2\js\i18n\tr.js" />
+    <Content Include="Select2\js\i18n\uk.js" />
+    <Content Include="Select2\js\i18n\vi.js" />
+    <Content Include="Select2\js\i18n\zh-CN.js" />
+    <Content Include="Select2\js\i18n\zh-TW.js" />
+    <Content Include="Select2\js\select2.full.js" />
+    <Content Include="Select2\js\select2.full.min.js" />
+    <Content Include="Select2\js\select2.js" />
+    <Content Include="Select2\js\select2.min.js" />
+    <Content Include="vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="vendor\datatables\dataTables.bootstrap4.min.css" />
+    <Content Include="vendor\datatables\dataTables.bootstrap4.min.js" />
+    <Content Include="vendor\datatables\jquery.dataTables.js" />
+    <Content Include="vendor\datatables\jquery.dataTables.min.js" />
+    <Content Include="vendor\jquery\jquery.js" />
+    <Content Include="vendor\jquery\jquery.min.js" />
+    <Content Include="vendor\jquery\jquery.slim.js" />
+    <Content Include="vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Orders.cs" />
+    <Compile Include="OrderList.aspx.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderList.aspx.designer.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderListFilter.aspx.cs">
+      <DependentUpon>OrderListFilter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderListFilter.aspx.designer.cs">
+      <DependentUpon>OrderListFilter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="vendor\jquery\jquery.min.map" />
+    <Content Include="vendor\jquery\jquery.slim.min.map" />
+    <Content Include="Site1.Master" />
+    <Content Include="app-assets\fonts\icomoon\icomoonc994.eot" />
+    <Content Include="app-assets\fonts\icomoon\icomoonc994.ttf" />
+    <Content Include="app-assets\fonts\icomoon\icomoonc994.woff" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50724</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50724/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
